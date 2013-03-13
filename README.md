@@ -4,7 +4,7 @@ This plugin provides a simple way to embed your web application with page view t
 
 ## Configuration
 
-First of all, you need to set your analytics account id in Config.groovy.
+First of all, you need to set your analytics account id in `Config.groovy`.
 
 	google.analytics.account="UA-YOURACCOUNT-ID"
 
