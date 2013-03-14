@@ -1,8 +1,12 @@
 <script type="text/javascript">
 
+if (console.debug == undefined)
+    console.debug = function(text) {}
+
 <%
     def debugAccount = ""
     def debugTrackEvent = ""
+
     if (grailsApplication.config.google.analytics.debug == true) {
         debugAccount = '"'+grailsApplication.config.google.analytics.account+'"'
         debugTrackEvent = 'category + " " + action + " " + label'
