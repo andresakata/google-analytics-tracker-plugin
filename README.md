@@ -20,7 +20,7 @@ Put the following tag in the end of the pages you want to track:
 
 ### Tracking Events
 
-To track an event, you simply add a `ga-tracked` class in the element, and declare the attributes `data-ga-category`, `data-ga-action` and `data-ga-label`.
+To track a click event, you simply add a `ga-tracked` class in the element, and declare the attributes `data-ga-category`, `data-ga-action` and `data-ga-label`.
 
 For example:
 
