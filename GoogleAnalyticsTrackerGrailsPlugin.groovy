@@ -6,6 +6,7 @@ class GoogleAnalyticsTrackerGrailsPlugin {
     def authorEmail = "andre.sakata@informant.com.br"
     def description = "This plugin provides a simple way to embed your web application with page view tracking and event tracking of Google Analytics."
     def documentation = "http://grails.org/plugin/google-analytics-tracker-plugin"
-    //def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
-    //def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def license = "APACHE"
+    def issueManagement = [system: 'GitHub', url: 'https://github.com/andresakata/google-analytics-tracker-plugin/issues']
+    def scm = [url: 'https://github.com/andresakata/google-analytics-tracker-plugin']
 }
