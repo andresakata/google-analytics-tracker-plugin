@@ -1,4 +1,4 @@
-<plugin name='google-analytics-tracker-plugin' version='0.1' grailsVersion='2.0 &gt; *'>
+<plugin name='google-analytics-tracker' version='0.1' grailsVersion='2.0 &gt; *'>
   <author>André Guimarães Sakata</author>
   <authorEmail>andre.sakata@informant.com.br</authorEmail>
   <title>Google Analytics Tracker Plugin</title>
