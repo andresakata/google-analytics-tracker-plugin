@@ -1,19 +1,20 @@
 <script type="text/javascript">
 
-if (console.debug == undefined)
-    console.debug = function(text) {}
-
 <%
     def debugAccount = ""
     def debugTrackEvent = ""
+    def debug = grailsApplication.config.google.analytics.debug
 
-    if (grailsApplication.config.google.analytics.debug) {
+    if (debug == true) {
         debugAccount = '"'+grailsApplication.config.google.analytics.account+'"'
         debugTrackEvent = 'category + " " + action + " " + label'
     }
 %>
 
-console.debug(${debugAccount});
+<%
+    if (debug)
+        out << "if (console.debug == undefined) console.debug = function(text) {}; console.debug(${debugAccount});"
+%>
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', '${grailsApplication.config.google.analytics.account}']);
@@ -27,7 +28,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
 var GoogleAnalyticsTracker = {
     trackEvent: function(category, action, label) {
-        console.debug(${debugTrackEvent});
+        <%
+            if (debug)
+                out << "console.debug(${debugTrackEvent});"
+        %>
         _gaq.push(['_trackEvent', category, action, label]);
     },
 
